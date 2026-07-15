@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { SensorProvider } from "./context/SensorContext";
 
 import "./index.css";
 import App from "./App";
@@ -10,7 +11,9 @@ ReactDOM.createRoot(
 ).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+        <SensorProvider>
+            <App />
+        </SensorProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
